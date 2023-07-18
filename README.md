@@ -19,7 +19,7 @@ In this repository, you will find a diverse range of projects covering artificia
 
 ## Projects
 
-### Movie Assistant
+### [Movie Assistant](movie-assistant)
 
 The Movie Assistant project aims to build a conversational AI system that assists users in discovering movies, providing recommendations, and offering information about movies and actors. The project utilizes natural language processing (NLP) techniques and movie-related datasets.
 
