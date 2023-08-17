@@ -23,7 +23,7 @@ In this repository, you will find a diverse range of projects covering artificia
 
 The Movie Assistant project aims to build a conversational AI system that assists users in discovering movies, providing recommendations, and offering information about movies and actors. The project utilizes natural language processing (NLP) techniques and movie-related datasets.
 
-### Hangman
+### [Hangman](hangman)
 
 The Hangman project is an interactive game where players attempt to guess a word by suggesting letters within a limited number of attempts. It showcases the implementation of a classic word-guessing game using Python and demonstrates basic programming concepts.
 
