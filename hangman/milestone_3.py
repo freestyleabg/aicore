@@ -1,0 +1,33 @@
+import random
+
+
+word_list = ["mangoes", "bananas", "grapes", "strawberries", "apples"]
+class Hangman:
+    def __init__(self, word_list, num_lives=5):
+        self.guess = None
+        self.word_list = word_list
+        self.num_lives = num_lives
+        self.word = random.choice(self.word_list)
+        self.word_guessed = ["_" for element in self.word]
+        self.num_letters = len(set(self.word))
+        self.list_of_guesses = []
+
+    def check_guess(self, guess):
+        self.guess = guess
+        if guess.lower() in self.word.lower():
+            print(f"Good guess! {guess} is in the word.")
+
+
+    def ask_for_input(self):
+        while True:
+            guess = input("Enter a single letter: ").lower()
+            if guess.isalpha() is False and len(guess) > 1:
+                print("Invalid letter. Please, enter a single alphabetical character.")
+            elif any(guess in element for element in self.list_of_guesses):
+                print("You already tried that letter!")
+            else:
+                self.check_guess(guess)
+                self.list_of_guesses.append(guess)
+
+hangman_game = Hangman(word_list)
+hangman_game.ask_for_input()
