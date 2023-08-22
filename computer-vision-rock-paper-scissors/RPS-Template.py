@@ -5,21 +5,20 @@ model = load_model('keras_model.h5')
 cap = cv2.VideoCapture(4)
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
-# # %%
-# availableBackends = [cv2.videoio_registry.getBackendName(b) for b in cv2.videoio_registry.getBackends()]
-# print(availableBackends)
-#
-# # %%
-# import cv2
-# # Print the list of available cameras and their indices
-# for i in range(5):  # Assuming there are at most 10 cameras
-#     cap = cv2.VideoCapture(i)
-#     if cap.isOpened():
-#         print(f"Camera index {i} is available")
-#         cap.release()
-#     else:
-#         print(f"No camera found at index {i}")
-# # %%
+def find_cv2_backends():
+    availableBackends = [cv2.videoio_registry.getBackendName(b) for b in cv2.videoio_registry.getBackends()]
+    print(availableBackends)
+
+def find_camera_index():
+    # Print the list of available cameras and their indices
+    for i in range(5):  # Assuming there are at most 10 cameras
+        cap = cv2.VideoCapture(i)
+        if cap.isOpened():
+            print(f"Camera index {i} is available")
+            cap.release()
+        else:
+            print(f"No camera found at index {i}")
+
 
 while True:
     ret, frame = cap.read()
