@@ -89,6 +89,7 @@ class Hangman:
         self.check_guess(guess)
         self.list_of_guesses.append(guess)
 
+
 def play_game(word_list_entry):
     num_lives = 5
     game = Hangman(word_list_entry, num_lives)
@@ -102,6 +103,7 @@ def play_game(word_list_entry):
         else:
             print("Congratulations. You won the game!")
             break
+
 
 if __name__ == '__main__':
     word_list = ['apple', 'banana', 'orange', 'pear', 'strawberry', 'watermelon', 'mango']

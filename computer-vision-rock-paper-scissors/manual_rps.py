@@ -47,4 +47,5 @@ def play():
         time.sleep(2)
 
 
-play()
+if __name__ == '__main__':
+    play()
