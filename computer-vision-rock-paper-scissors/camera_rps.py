@@ -63,8 +63,8 @@ class RockPaperScissors:
             running_time = time.time() - start_time
             running_time_inverse = abs(countdown_time - running_time)
             # Draw Countdown on webcam frame
-            countdown = cv2.putText(frame, str(round(running_time_inverse, 0)),
-                                    (450, 450), cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 255, 0), 5)
+            cv2.putText(frame, str(round(running_time_inverse, 0)), (450, 450),
+                        cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 255, 0), 5)
             # Draw countdown on webcam frame
             cv2.imshow('frame', frame)
             if cv2.waitKey(1) and running_time > countdown_time:
@@ -117,11 +117,26 @@ class RockPaperScissors:
                     break
 
 
+def find_cv2_backends():
+    available_backends = [cv2.videoio_registry.getBackendName(b) for b in cv2.videoio_registry.getBackends()]
+    print("Available OpenCV Video Backends:", available_backends)
+
+
+def find_camera_index(max_cameras=10):
+    # Print the list of available cameras and their indices
+    for i in range(max_cameras):
+        cap = cv2.VideoCapture(i)
+        if cap.isOpened():
+            print(f"Camera index {i} is available")
+            cap.release()
+        else:
+            print(f"No camera found at index {i}")
+
+
 if __name__ == "__main__":
     game = RockPaperScissors()
     game.play()
 
     # Cleanup after the game is finished
-    cap.release() # Release the webcam
-    cv2.destroyAllWindows() # Close all open windows
-
+    cap.release()  # Release the webcam
+    cv2.destroyAllWindows()  # Close all open windows
