@@ -6,7 +6,7 @@ from keras.models import load_model
 import keyboard
 
 # Load the pre-trained Keras model
-model = load_model('keras_model.h5')
+model = load_model('models/keras_model.h5')
 
 # Open the webcam (change the index if needed)
 cap = cv2.VideoCapture(4)

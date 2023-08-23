@@ -5,7 +5,6 @@ Welcome to the Computer Vision Rock Paper Scissors project! This project focuses
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Demo](#demo)
 - [Features](#features)
 - [Getting Started](#getting-started)
 - [Contributing](#contributing)
@@ -14,10 +13,6 @@ Welcome to the Computer Vision Rock Paper Scissors project! This project focuses
 ## Introduction
 
 The Computer Vision Rock Paper Scissors project aims to build a system that can accurately recognize and classify the hand gestures representing "Rock," "Paper," and "Scissors." This involves training a machine learning model on a dataset of hand gesture images and implementing real-time object recognition using computer vision techniques.
-
-## Demo
-
-![Rock Paper Scissors Demo](demo.gif)
 
 ## Features
 
@@ -32,7 +27,7 @@ To run the Computer Vision Rock Paper Scissors project, follow these steps:
 1. Clone this repository: `git clone https://github.com/freestyleabg/aicore.git`
 2. Navigate to the Computer Vision Rock Paper Scissors directory: `cd aicore/computer-vision-rock-paper-scissors`
 3. Install the required dependencies: `pip install -r requirements.txt`
-4. Run the application: `python rock_paper_scissors.py`
+4. Run the application: `python camera_rps.py`
 
 Make sure you have Python and the required libraries installed on your machine.
 
