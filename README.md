@@ -27,7 +27,7 @@ The Movie Assistant project aims to build a conversational AI system that assist
 
 The Hangman project is an interactive game where players attempt to guess a word by suggesting letters within a limited number of attempts. It showcases the implementation of a classic word-guessing game using Python and demonstrates basic programming concepts.
 
-### Computer Vision Rock Paper Scissors
+### [Computer Vision Rock Paper Scissors](computer-vision-rock-paper-scissors)
 
 The Computer Vision Rock Paper Scissors project combines computer vision techniques with machine learning to create a system capable of recognizing hand gestures for the game "Rock, Paper, Scissors." The project involves image processing, deep learning, and real-time object recognition.
 
