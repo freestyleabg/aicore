@@ -2,12 +2,6 @@ import random
 import time
 
 
-# options = ['rock', 'paper', 'scissors']
-# cpu_choice = random.randint(1, 3)
-# print("Options: ")
-# [print(f"{i}: {j.capitalize()}") for i, j in enumerate(options, 1)]
-# user_choice = int(input("Enter the number corresponding to your choice: "))
-
 class RockPaperScissors:
     def __init__(self, num_wins=0, num_loss=0):
         self.num_wins = num_wins
@@ -35,6 +29,7 @@ class RockPaperScissors:
             self.num_loss += 1
         print(f"Wins: {self.num_wins}, Losses: {self.num_loss}")
 
+
 def play():
     num_wins = 0
     num_loss = 0
@@ -47,5 +42,4 @@ def play():
         time.sleep(2)
 
 
-if __name__ == '__main__':
-    play()
+play()

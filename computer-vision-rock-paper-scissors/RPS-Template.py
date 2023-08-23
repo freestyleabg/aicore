@@ -5,9 +5,11 @@ model = load_model('keras_model.h5')
 cap = cv2.VideoCapture(4)
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
+
 def find_cv2_backends():
-    availableBackends = [cv2.videoio_registry.getBackendName(b) for b in cv2.videoio_registry.getBackends()]
-    print(availableBackends)
+    available_backends = [cv2.videoio_registry.getBackendName(b) for b in cv2.videoio_registry.getBackends()]
+    print(available_backends)
+
 
 def find_camera_index():
     # Print the list of available cameras and their indices
